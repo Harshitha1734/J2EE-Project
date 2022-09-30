@@ -7,24 +7,33 @@
 <title>Products</title>
 <style>
 body{
-background-color:#008CBA;
+ background-color:#808080;	
+        padding: 0%;
+        margin: 0%;
+    
 }
 .buttons{
 
 margin-top:10%;
 }
 .btn{
-background-color:#d5f4e6;
-border-radius:8px;
+background-color:#ffffff;
+border-radius:30px;
+color:#000000;
 border:none;
 padding:10px;
 text-align:center;
 text-decoration:none;
 display:inline-block;
-font-size:30px;
+font-size:25px;
+}
+.btn:hover {
+  background-color: #000000;
+  color: white;
 }
 .redirect{
-background-color:#d5f4e6;
+background-color:#ffffff;
+color:#000000;
 border-radius:8px;
 border:none;
 padding:2px;
@@ -33,15 +42,19 @@ text-decoration:none;
 display:inline-block;
 font-size:20px;
 }
+.redirect:hover {
+  background-color: #000000;
+  color: white;
+}
 </style>
 </head>
 <body>
 <center>
-<h1 style="font-size:30px;">Products</h1>
+<h1 style="font-size:30px;font-family:Georgia; ">Products</h1>
 <a href="save_product" class="btn">Save Product</a>
 <br>
 <br>
-<a href="save_product" class="btn">Update Product</a>
+<a href="update_product" class="btn">Update Product</a>
 <br>
 <br>
 <a href="merchant" class="btn">Get Product By Merchant</a>
@@ -55,7 +68,7 @@ font-size:20px;
 <br>
 <a href="product_list" class="btn">Product Details</a>
 </center>
-<a href="/" class="redirect">Index</a>
-<a href="orders" class="redirect">Orders</a>
+<a href="/" class="redirect">Go To Index</a>&nbsp;&nbsp;
+<a href="orders" class="redirect">Go To Orders</a>
 </body>
 </html>

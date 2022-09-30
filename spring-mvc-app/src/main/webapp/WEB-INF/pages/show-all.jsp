@@ -4,15 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <meta charset="ISO-8859-1">
 <title>Product details</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <style>
 body{
-background-color:#b4b4b4;
+ background-color:#C0C0C0;
 }
 .redirect{
-background-color:#ffffff;
+background-color:#808080;
+color:#ffffff;
 border-radius:8px;
 border:none;
 padding:2px;
@@ -21,13 +22,19 @@ text-decoration:none;
 display:inline-block;
 font-size:20px;
 }
+
+.redirect:hover {
+  background-color: #000000;
+  color: white;
+}
 </style>
 </head>
-<body>
+<body class="p-4 w-100">
+
 <center>
-<h1>Products</h1></center>
-<table class="table table-striped">
-	<thead>
+<h1 style="font-size:30px;font-family:Georgia;">Products</h1></center>
+<table class="table table-striped border" style="background-color:#808080;">
+	<thead style="color:#ffffff">
 		<tr>
 			<th>Product Id</th>
 			<th>Product Name</th>
@@ -50,19 +57,6 @@ font-size:20px;
 </c:forEach>
 </tbody>
 </table>
-<a href="products" class="redirect">Products</a>
-<nav aria-label="Page navigation example">  
-	<ul class="pagination">    
-	<li class="page-item">      
-	<a class="page-link" href="#" aria-label="Previous">       
-	 <span aria-hidden="true">&laquo;</span>     
-	    <span class="sr-only">Previous</span>  </a> </li>    
-	    <li class="page-item"><a class="page-link" href="#">1</a></li>   
-	     <li class="page-item"><a class="page-link" href="#">2</a></li>   
-	     
-	      <li class="page-item"><a class="page-link" href="#">3</a></li>  
-	        <li class="page-item">      <a class="page-link" href="#" aria-label="Next">       
-	         <span aria-hidden="true">&raquo;</span>      
-	           <span class="sr-only">Next</span></a></li></ul></nav>
+<a href="products" class="redirect">Go To Products</a>
 </body>
 </html>

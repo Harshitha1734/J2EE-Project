@@ -39,9 +39,14 @@ public class ProductController {
         return this.service.findAll();
     }
     
-    @PostMapping("/byMerchant")
-    public List<Product> findByProductMerchant(@RequestBody String productMerchant) {
-        return this.service.findByMerchantName(productMerchant);
+//    @PostMapping("/byMerchant")
+//    public List<Product> findByProductMerchant(@RequestBody String productMerchant) {
+//        return this.service.findByMerchantName(productMerchant);
+//    }
+    
+    @GetMapping("/list/{merchantName}")
+    public List<Product> findById(@PathVariable("merchantName") String merchant) {
+        return this.service.findByMerchantName(merchant);
     }
     
     @GetMapping("/list/available")
@@ -66,15 +71,15 @@ public class ProductController {
         return ResponseEntity.ok().body(null);
     }
     
-    @GetMapping("/list/{pageNo}")
-    public String display(@PathVariable (value = "pageNo") int pageNo, Model m) {
-     int pageSize = 2;   // How many records on per page
-     Page<Product> page= repo.findByPagination(pageNo, pageSize);
-     m.addAttribute("currentPage", pageNo);
-     m.addAttribute("totalPages", page.getTotalPages());
-     m.addAttribute("totalRecords", page.getTotalElements());
-     m.addAttribute("list", productsList);
-     return "index";
-     
-    }
+//    @GetMapping("/list/{pageNo}")
+//    public String display(@PathVariable (value = "pageNo") int pageNo, Model m) {
+//     int pageSize = 2;   // How many records on per page
+//     Page<Product> page= repo.findByPagination(pageNo, pageSize);
+//     m.addAttribute("currentPage", pageNo);
+//     m.addAttribute("totalPages", page.getTotalPages());
+//     m.addAttribute("totalRecords", page.getTotalElements());
+//     m.addAttribute("list", productsList);
+//     return "index";
+//     
+//    }
    }

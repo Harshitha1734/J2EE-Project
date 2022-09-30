@@ -13,7 +13,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 //	public List<Product> findAll(Pageable pageable);
 //	Page<Product> findByPagination(int pageNo, int size);
 
-	public List<Product> findByMerchantName(String merchantName);
+	List<Product> findByMerchantName(String merchantName);
 	
 	@Query(value="select * from products where inventory>0",nativeQuery=true)
     List<Product> findByAvailability();

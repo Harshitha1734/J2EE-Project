@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update Order</title>
+<title>Get Order By User Name</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <style>
 body{
@@ -29,12 +29,12 @@ font-size:20px;
 </style>
 </head>
 <body class="d-flex flex-column align-items-center">
-<h1 style="text-align:center;">Update Order</h1>
+<h1 style="text-align:center;">Get Order By User Name</h1>
 <form action="" method="post"class="form w-50 border rounded p-2" style="color:#000000;background-color:#b4b4b4;" >
    
    <div class="form-group">
-   <label for="orderid"><b>Order Id:</b></label>
-   <input required type="text" name="orderId" id="orderId" class="form-control"/>
+   <label for="userName"><b>User Name:</b></label>
+   <input required type="text" name="user" id="user" class="form-control"/>
    </div>
    <br>
     <div class="form-group d-flex justify-content-center">

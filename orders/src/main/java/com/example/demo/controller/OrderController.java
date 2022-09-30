@@ -33,11 +33,16 @@ public class OrderController {
         return this.service.findAll();
     }
     
-    @PostMapping("/order-id")
-    public List<Order> findById(@RequestBody int orderId) {
-    	System.out.println(this.service.findByOrderId(orderId));
-        return this.service.findByOrderId(orderId);
+    @GetMapping("/list/{orderId}")
+    public List<Order> findById(@PathVariable("orderId") int  id ) {
+        return this.service.findByOrderId(id);
     }
+    
+    @GetMapping("/list/user/{name}")
+    public List<Order> findByUserName(@PathVariable("name") String name ) {
+        return this.service.findByUserName(name);
+    }
+    
     
     @PutMapping("/update")
     public ResponseEntity<Order> update(@RequestBody Order entity){

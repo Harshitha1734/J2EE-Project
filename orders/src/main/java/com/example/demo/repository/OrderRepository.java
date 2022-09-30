@@ -9,5 +9,6 @@ import com.example.demo.entity.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 	public List<Order> findByOrderId(int orderId);
+	public List<Order> findByCustomerName(String name);
 
 }

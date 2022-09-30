@@ -26,8 +26,9 @@ public class OrderService {
 	}
 	public Order update(Order entity) {
 		return this.repo.save(entity);	}
-//	public Product getProductByID(int id) {
-//		return this.repo.findProduct(id);
-//	}
+
+	 public List<Order> findByUserName(String name){
+		 return this.repo.findByCustomerName(name);
+	 }
 	
 }
